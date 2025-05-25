@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealWise - Find the Best Deals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-tags"></i>
+            <span>DealWise</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#deals">Deals</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Find the Best Deals on Limited Edition Products</h1>
+            <p>Let our AI-powered voice agents negotiate the best prices for you</p>
+            <button id="startSearch" class="cta-button">
+                <i class="fas fa-microphone"></i>
+                Start Voice Search
+            </button>
+            <div id="voiceStatus" class="voice-status hidden">
+                <div class="voice-indicator"></div>
+                <span>AI Agent is listening...</span>
+            </div>
+        </section>
+
+        <section id="search-form" class="search-container">
+            <h2>What are you looking for?</h2>
+            <div class="form-group">
+                <input type="text" id="productName" placeholder="Product name (e.g., Nike Air Jordan 1)">
+                <input type="number" id="maxPrice" placeholder="Maximum price">
+                <input type="email" id="userEmail" placeholder="Your email address">
+                <select id="category">
+                    <option value="">Select Category</option>
+                    <option value="sneakers">Sneakers</option>
+                    <option value="tickets">Concert Tickets</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="collectibles">Collectibles</option>
+                </select>
+                <button id="searchButton" class="search-button">
+                    <i class="fas fa-search"></i>
+                    Find Deals
+                </button>
+            </div>
+        </section>
+
+        <section id="results" class="results-container hidden">
+            <h2>Top Deals Found</h2>
+            <div class="deals-grid" id="dealsGrid">
+                <!-- Deals will be dynamically inserted here -->
+            </div>
+            <div class="loading-spinner hidden" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Our AI agents are negotiating the best deals...</p>
+            </div>
+            <div id="negotiationStatus" class="negotiation-status hidden">
+                <h3>Live Negotiation Status</h3>
+                <div id="negotiationLog" class="negotiation-log"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>How DealWise Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Voice Agents</h3>
+                    <p>Our intelligent agents contact multiple resellers to find the best deals</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-comments-dollar"></i>
+                    <h3>Price Negotiation</h3>
+                    <p>Automated negotiation to secure the best possible prices</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Market Analysis</h3>
+                    <p>Real-time market data analysis for informed decisions</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DealWise</h3>
+                <p>Finding the best deals on limited-edition products</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#deals">Deals</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@dealwise.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DealWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="sheets-integration.js"></script>
+    <script src="email-service.js"></script>
+    <script src="omni-agent.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

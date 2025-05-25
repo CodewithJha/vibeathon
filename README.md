@@ -1,4 +1,3 @@
-# vibeathon
 # DealWise - AI-Powered Deal Finding Platform
 
 DealWise is an innovative platform that uses AI to help users find the best deals on limited-edition products, concert tickets, and collectibles. The platform features voice-enabled search and automated price negotiations with resellers.
@@ -190,4 +189,4 @@ For support, email support@dealwise.com or create an issue in the repository.
 
 ---
 
-Made with ❤️ by the DealWise Team
+Made with ❤️ by the DealWise Team 
